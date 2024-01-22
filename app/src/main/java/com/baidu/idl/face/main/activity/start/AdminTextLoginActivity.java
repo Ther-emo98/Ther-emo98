@@ -9,6 +9,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.baidu.idl.face.main.activity.BaseActivity;
@@ -35,6 +36,7 @@ public class AdminTextLoginActivity extends BaseActivity {
     EditText et_username;
     EditText et_password;
     Button btn_login;
+    TextView textView;
     request requestUrl = new request();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,21 +45,29 @@ public class AdminTextLoginActivity extends BaseActivity {
         et_username = findViewById(R.id.et_username);
         et_password = findViewById(R.id.et_password);
         btn_login = findViewById(R.id.btn_login);
-
+textView = findViewById(R.id.textView);
 //        点击登录
         btn_login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Log.i("输入账号", "onClick: "+et_username.getText());
-                et_username.setText("admin");
-                et_password.setText("123456");
-                try {
-                    StartLogin();
-                } catch (JSONException e) {
-                    throw new RuntimeException(e);
-                }
+                startActivity(new Intent(AdminTextLoginActivity.this, RegisterUserActivity.class));
+//                Log.i("输入账号", "onClick: "+et_username.getText());
+//                et_username.setText("admin");
+//                et_password.setText("1234567");
+//                try {
+//                    StartLogin();
+//                } catch (JSONException e) {
+//                    throw new RuntimeException(e);
+//                }
+
 //                登录成功后
 //                startActivity(new Intent(AdminTextLoginActivity.this, RegisterUserActivity.class));
+            }
+        });
+        textView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(AdminTextLoginActivity.this, RegisterUserActivity.class));
             }
         });
     }
