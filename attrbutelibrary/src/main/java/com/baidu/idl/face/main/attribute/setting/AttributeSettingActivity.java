@@ -94,8 +94,8 @@ public class AttributeSettingActivity extends AttributeBaseActivity implements V
         if (id == R.id.gate_settting_back) {
             finish();
         } else if (id == R.id.gate_face_detection) {
-            Intent intent = new Intent(AttributeSettingActivity.this, AttrbuteMinFaceActivity.class);
-            startActivity(intent);
+//            Intent intent = new Intent(AttributeSettingActivity.this, AttrbuteMinFaceActivity.class);
+//            startActivity(intent);
         } else if (id == R.id.gate_config_qualtify) {
             Intent intent = new Intent(AttributeSettingActivity.this, AttrbuteConfigQualtifyActivity.class);
             startActivity(intent);
