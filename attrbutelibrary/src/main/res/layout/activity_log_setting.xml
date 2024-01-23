@@ -100,8 +100,7 @@
                             android:thumb="@drawable/attribute_setting_switch_thumb"
                             android:layout_centerVertical="true"
                             android:layout_alignParentRight="true"
-                            android:layout_marginRight="22.5dp"
-                            android:track="@drawable/attribute_setting_switch_track_selector" />
+                            android:layout_marginRight="22.5dp"/>
                     </RelativeLayout>
                 </LinearLayout>
             </LinearLayout>

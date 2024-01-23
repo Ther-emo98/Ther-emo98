@@ -104,8 +104,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="235dp"
-                        android:thumb="@drawable/attribute_setting_switch_thumb"
-                        android:track="@drawable/attribute_setting_switch_track_selector" />
+                        android:thumb="@drawable/attribute_setting_switch_thumb"/>
 
                 </LinearLayout>
             </LinearLayout>
@@ -171,8 +170,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="130dp"
-                            android:thumb="@drawable/attribute_setting_switch_thumb"
-                            android:track="@drawable/attribute_setting_switch_track_selector" />
+                            android:thumb="@drawable/attribute_setting_switch_thumb"/>
                     </LinearLayout>
 
                     <View
@@ -200,8 +198,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="137dp"
-                            android:thumb="@drawable/attribute_setting_switch_thumb"
-                            android:track="@drawable/attribute_setting_switch_track_selector" />
+                            android:thumb="@drawable/attribute_setting_switch_thumb" />
                     </LinearLayout>
                 </LinearLayout>
             </LinearLayout>

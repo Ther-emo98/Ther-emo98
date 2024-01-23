@@ -93,8 +93,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="247dp"
-                            android:thumb="@drawable/attribute_setting_switch_thumb"
-                            android:track="@drawable/attribute_setting_switch_track_selector" />
+                            android:thumb="@drawable/attribute_setting_switch_thumb" />
                     </LinearLayout>
                 </LinearLayout>
 
