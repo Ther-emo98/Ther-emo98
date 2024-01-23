@@ -126,10 +126,10 @@
         <item name="android:background">#000000</item>
     </style>
 
-    <style name="configPopupWindow">
-        <item name="android:windowEnterAnimation">@anim/sr_config_popupwindow_show_anim</item>
-        <item name="android:windowExitAnimation">@anim/sr_config_popupwindow_hide_anim</item>
-    </style>
+<!--    <style name="configPopupWindow">-->
+<!--        <item name="android:windowEnterAnimation">@anim/sr_config_popupwindow_show_anim</item>-->
+<!--        <item name="android:windowExitAnimation">@anim/sr_config_popupwindow_hide_anim</item>-->
+<!--    </style>-->
 
     <style name="driverTextView">
         <item name="android:singleLine">true</item>
