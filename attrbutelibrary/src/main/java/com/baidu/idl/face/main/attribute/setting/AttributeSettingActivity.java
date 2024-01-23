@@ -103,8 +103,8 @@ public class AttributeSettingActivity extends AttributeBaseActivity implements V
             Intent intent = new Intent(AttributeSettingActivity.this, AttrbuteLensSettingsActivity.class);
             startActivity(intent);
         } else if (id == R.id.gate_picture_optimization){
-            Intent intent = new Intent(AttributeSettingActivity.this, PictureOptimizationActivity.class);
-            startActivity(intent);
+//            Intent intent = new Intent(AttributeSettingActivity.this, PictureOptimizationActivity.class);
+//            startActivity(intent);
         } else if (id == R.id.configVersionMessage) {
             Intent intent = new Intent(AttributeSettingActivity.this, VersionMessageActivity.class);
             startActivity(intent);
