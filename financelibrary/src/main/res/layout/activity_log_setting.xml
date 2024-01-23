@@ -83,7 +83,6 @@
                             android:layout_marginLeft="20dp"
                             android:text="应用日志打印"
                             android:layout_centerVertical="true"
-                            android:textColor="@color/gate_white"
                             android:textSize="20sp" />
                         <Button
                             android:layout_toRightOf="@+id/tv_log"
