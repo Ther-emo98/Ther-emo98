@@ -3,22 +3,40 @@
 buildscript {
     repositories {
         jcenter()
-        maven{ url 'http://maven.aliyun.com/nexus/content/groups/public/'}
+        maven { url 'http://maven.aliyun.com/nexus/content/groups/public/' }
         google()
         maven { url 'https://jitpack.io' }
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:3.4.1'
-//        classpath "com.android.tools.build:gradle-experimental:0.7.0-alpha4"
-        // NOTE: Do not place your application dependencies here; they belong
-        // in the individual module build.gradle files
+    }
+}
+
+subprojects {
+    apply plugin: 'maven-publish'
+
+    publishing {
+        publications {
+            mavenJava(MavenPublication) {
+                // Instead of from components.java, specify the artifacts directly
+                artifactId = 'your-artifact-id' // 替换为你的实际 Artifact ID
+                version = 'your-version' // 替换为你的实际版本号
+
+                artifact file('path/to/your/artifact.jar') // 替换为实际的 JAR 文件路径
+            }
+        }
+        repositories {
+            maven {
+                url = uri("https://jitpack.io")
+            }
+        }
     }
 }
 
 allprojects {
     repositories {
         jcenter()
-        maven{ url 'http://maven.aliyun.com/nexus/content/groups/public/'}
+        maven { url 'http://maven.aliyun.com/nexus/content/groups/public/' }
         google()
     }
 }
