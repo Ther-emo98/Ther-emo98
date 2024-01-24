@@ -12,6 +12,14 @@ buildscript {
         classpath 'com.github.dcendents:android-maven-gradle-plugin:2.1'
         // 移除 Bintray 插件依赖
     }
+    allprojects {
+        repositories {
+            mavenCentral()
+            maven { url 'https://maven.aliyun.com/nexus/content/groups/public/' }
+            google()
+            maven { url 'https://jitpack.io' }
+        }
+    }
 }
 
 plugins {

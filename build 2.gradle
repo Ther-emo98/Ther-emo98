@@ -10,6 +10,14 @@ buildscript {
     dependencies {
         classpath 'com.android.tools.build:gradle:3.4.1'
     }
+    allprojects {
+        repositories {
+            mavenCentral()
+            maven { url 'https://maven.aliyun.com/nexus/content/groups/public/' }
+            google()
+            maven { url 'https://jitpack.io' }
+        }
+    }
 }
 
 subprojects {
