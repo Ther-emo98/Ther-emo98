@@ -46,9 +46,10 @@ android {
 dependencies {
     implementation 'com.android.support.constraint:constraint-layout:2.0.4'
     implementation files('libs/liantian.jar')
+    implementation fileTree(dir: 'libs/unpackedAar', include: ['*.jar', '*.aar'])
     compile fileTree(include: ['*.jar'], dir: 'libs')
     implementation 'org.jetbrains:annotations-java5:15.0'
-    compile files('libs/orbbec_module-debug.aar')
+//    compile files('libs/orbbec_module-debug.aar')
     implementation files('libs/FaceSDK.jar')
     implementation files('libs/bd_unifylicense.jar')
 }
