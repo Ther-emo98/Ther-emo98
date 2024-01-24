@@ -2,49 +2,49 @@
 
 buildscript {
     repositories {
-        jcenter()
-        maven{ url 'https://maven.aliyun.com/nexus/content/groups/public/'}
+        mavenCentral()
+        maven { url 'https://maven.aliyun.com/nexus/content/groups/public/' }
         google()
         maven { url 'https://jitpack.io' }
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:3.4.1'
+        classpath 'com.android.tools.build:gradle:4.2.2' // 使用最新版本
+        classpath 'com.github.dcendents:android-maven-gradle-plugin:2.1'
+        // 移除 Bintray 插件依赖
+    }
+}
+
+plugins {
+    id 'java'
+    id 'maven-publish'
+}
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_1_8
+    targetCompatibility = JavaVersion.VERSION_1_8
+}
+
+allprojects {
+    repositories {
+        // 移除 JCenter 仓库引用
+        maven { url 'https://maven.aliyun.com/nexus/content/groups/public/' }
+        google()
     }
 }
 
 subprojects {
     apply plugin: 'maven-publish'
+    apply plugin: 'com.github.dcendents.android-maven'
 
     publishing {
         publications {
-            mavenJava(MavenPublication) {
-                // Instead of from components.java, specify the artifacts directly
-                artifactId = 'your-artifact-id' // 替换为你的实际 Artifact ID
-                version = 'your-version' // 替换为你的实际版本号
-
-                artifact file('path/to/your/artifact.jar') // 替换为实际的 JAR 文件路径
-            }
+            // ...
         }
         repositories {
             maven {
                 url = uri("https://jitpack.io")
             }
+            // 移除 Bintray 仓库配置
         }
     }
 }
-allprojects {
-    repositories {
-        jcenter()
-        maven{ url 'https://maven.aliyun.com/nexus/content/groups/public/'}
-        google()
-    }
-}
-
-tasks.withType(JavaCompile) {
-    sourceCompatibility = JavaVersion.VERSION_1_8
-    targetCompatibility = JavaVersion.VERSION_1_8
-}
-task clean(type: Delete) {
-    delete rootProject.buildDir
-}
-
