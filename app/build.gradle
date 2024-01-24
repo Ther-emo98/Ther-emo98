@@ -64,7 +64,8 @@ configurations {
     compile.exclude group: 'org.jetbrains' , module:'annotations'
 }
 dependencies {
-    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+    implementation 'com.android.support.constraint:constraint-layout:2.0.4'
+//    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
     implementation project(path: ':registerlibrary')
     implementation project(path: ':gazelibrary')
     implementation project(path: ':identifylibrary')
