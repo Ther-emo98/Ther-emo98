@@ -20,12 +20,17 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
-
+    repositories {
+        flatDir {
+            dirs 'libs'
+        }
+    }
 }
 
 dependencies {
     implementation 'com.android.support.constraint:constraint-layout:2.0.4'
     implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation(name: 'orbbec_module-debug', ext: 'aar')
     implementation 'com.android.support:appcompat-v7:28.0.0'
     implementation project(path: ':facelibrary')
     implementation project(path: ':datalibrary')

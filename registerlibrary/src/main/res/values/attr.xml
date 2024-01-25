@@ -13,6 +13,8 @@
     <attr name="value" format="float" />
     <!-- 绘制内容的单位 -->
     <attr name="unit" format="string|reference" />
+
+    <attr name="sr_config_popupwindow_show_anim" format="dimension" />
     <attr name="unitSize" format="dimension" />
     <attr name="unitColor" format="color|reference" />
     <!-- 绘制内容相应的提示语 -->
